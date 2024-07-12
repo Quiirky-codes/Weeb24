@@ -36,7 +36,7 @@ const Contact = () => {
           'zy6x_ETfJ_0MJskeG')
           .then(() => {
             setLoading(false);
-          alert('Thank you for reaching out. I will address your message promptly and get back to you as soon as possible.');
+          alert('Thank you for volunteering.');
           setForm({
             name: '',
             email: '',
@@ -53,15 +53,15 @@ const Contact = () => {
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn('left', "tween",0.2,1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
-          <p className={styles.sectionSubText}>Get in Touch</p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
+        className="flex-[0.75] bg-gray-700 p-8 rounded-2xl">
+          <p className={styles.sectionSubText}>Lend a helping hand</p>
+          <h3 className={styles.sectionHeadText}>Connect.</h3>
           <form 
             ref={formRef}
             onSubmit={handleSubmit}
             className="mt-12 flex flex-col gap-8">
             <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-bold mb-4'>Your Name</span>
             <input
               type='text'
               name='name'
@@ -72,7 +72,7 @@ const Contact = () => {
             />
             </label>
             <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
+            <span className='text-white font-bold mb-4'>Your Email</span>
             <input
               type='email'
               name='email'
@@ -83,7 +83,7 @@ const Contact = () => {
             />
             </label> 
             <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-white font-bold mb-4'>Your Message</span>
             <textarea
               rows={7}
               name='message'
@@ -96,7 +96,7 @@ const Contact = () => {
               
               <button 
                 type="submit"
-                className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl">
+                className="bg-[#2e8e57] py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl">
                   {loading ? 'Sending...' : 'Send Message'}
                 </button>
             </form>

@@ -52,6 +52,22 @@ import hal56 from "./hal56.png";
 import nba from "./nba.png";
 import vehiclemain from "./vehiclemain.png";
 
+import exp1 from "./exp1.png";
+import exp2 from "./exp2.png";
+import exp3 from "./exp3.png";
+import exp4 from "./exp4.png";
+import prayers from "./prayers.png";
+import support from "./support.png";
+import vol from "./vol.png";
+import donations from "./donations.png";
+import poorcarrot from "./poorcarrot.jpg";
+import poorhuts from "./poorhuts.jpg";
+import poorkid from "./poorkid.jpg";
+import poorpeople from "./poorpeople.jpg";
+import poorniggers from "./poorniggers.jpg";
+import poorwoman from "./poorwoman.jpg";
+import logonew from "./logonew.png";
+
 export {
   logoq,
   backend,
@@ -102,5 +118,19 @@ export {
   hal56,
   nba,
   vehiclemain,
-
+  exp1,
+  exp2,
+  exp3,
+  exp4,
+  prayers,
+  support,
+  vol,
+  donations,
+  poorcarrot,
+  poorhuts,
+  poorkid,
+  poorpeople,
+  poorniggers,
+  poorwoman,
+  logonew
 };

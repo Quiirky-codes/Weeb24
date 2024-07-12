@@ -6,7 +6,7 @@ import { projects } from "../constants";
 import { sectionWrapper } from "../HOC";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, image }) => {
   return(
     <motion.div variance={fadeIn("up","spring", index * 0.5, 0.75)}>
       <Tilt
@@ -15,7 +15,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           scale: 1,
           speed: 450
         }}
-        className="bg-tertiary p-5 rounded-2x1 sm:w-[360px] w-full rounded-[20px]">
+        className="bg-gray-100 p-5 rounded-2x1 sm:w-[360px] w-full rounded-[20px]">
           <div className="relative w-full h-[230px]">
             <img
             src={image}
@@ -23,7 +23,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             className="w-full h-full object-cover rounded-2xl"/>
           </div>
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
+            {/* <div
               onClick={() => window.open
                 (source_code_link, "_blank")}
                 className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
@@ -31,10 +31,10 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                     src={github}
                     alt="github"
                     className="w-1/2 h-1/2 object-contain"/>
-                </div>
+                </div> */}
                 
           </div>
-          <div className="mt-5">
+          {/* <div className="mt-5">
             <h3 className="text-white text-[18px] font-bold">{name}</h3>
             <p className="mt-2 text-secondary text-[14px]">{description}</p>
           </div>
@@ -45,7 +45,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                 #{tag.name}
               </p>
             ))}
-          </div>
+          </div> */}
         </Tilt>
     </motion.div>
   )
@@ -54,19 +54,17 @@ const Project = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-    <p className={styles.sectionSubText}>Explore my innovative projects that blend cutting-edge technology with artistic creativity.</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+    <h2 className={styles.sectionHeadText}>Who we are</h2>
     </motion.div>
         <div className="w-full flex">
           <motion.p
             variants={fadeIn("","",0.1,1)}
-            className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+            className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-justify"
             >
-              My projects demonstrate the powerful synergy between technology and creativity, spanning fields such as Artificial Intelligence, Machine Learning, Data Science,
-              and Web Development. 
-              Each project reflects my dedication to solving real-world problems through innovative applications of neural networks, natural language processing, and computer vision. 
-              Additionally, I incorporate artistic elements, whether through digital art, painting, or sketching, to enhance the impact and user experience. 
-              These projects not only showcase my technical expertise but also my passion for leveraging creativity to inspire and drive meaningful outcomes.
+              A non-profit and non-Governmental Organization founded in 2024 to promote sustainable agriculture, 
+              improve nutrition, end world hunger and achieve food security. We commit ourselves to helping families 
+              in the poor communities, the marginalized and underprivileged to improve their lives and achieve lasting 
+            victory against poverty.
             </motion.p>
 
         </div>

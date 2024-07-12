@@ -7,28 +7,14 @@ import { sectionWrapper } from "../HOC";
 import { textVariant } from "../utils/motion";
 
 const EducationCard = ({education})=>(
-  <VerticalTimelineElement
-    contentStyle={{ background: '#1d1836', color: '#fff'}}
-    contentArrowStyle={{ borderRight: '7px solid #232631'}}
-    date={education.date}
-    iconStyle={{ background: education.iconBg }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={education.icon}
-          alt={education.company_name}
-          className="w-[60%] h-[60%] object-contain" />
-      </div>
-    }>
+  <VerticalTimelineElement>
       <div>
-        <h3 className="text-white text-[24px] font-bold">{education.title}</h3>
-        <p className="text-secondary text-[16px] font-semibold" style={{margin:0}}>{education.company_name}</p>
-        <p className="text-secondary text-[16px] font-semibold" style={{margin:0}}>{education.grade}</p>
+        <h3 className="text-[#2e8e57] text-[24px] font-bold">{education.title}</h3>
         <ul className="mt-5 list-disc ml-5 space-y-2">
           {education.points.map((point, index) => (
             <li
               key={`education-point-${index}`}
-              className="text-white-100 text-[14px] pl-1 tracking wider">
+              className="text-black-100 text-[14px] pl-1 tracking wider font-bold">
                 {point}
               </li>
           ))}
@@ -41,8 +27,8 @@ const Education = () => {
   return (
     <>
     <motion.div variants={textVariant()}>
-    <p className={styles.sectionSubText}>My education has provided me with a robust foundation in AI, ML, Data Science, and Web Development, empowering me to creatively solve complex problems and drive innovation.</p>
-        <h2 className={styles.sectionHeadText}>Education.</h2>
+    
+        <h2 className={styles.sectionHeadText}>What we do.</h2>
     </motion.div>
     <div className="mt-20 flex flex-col">
       <VerticalTimeline>
